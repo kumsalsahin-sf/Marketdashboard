@@ -33,7 +33,7 @@ names = edited_df["Segment"].to_list()
 cumulative_volume = np.cumsum(volumes)
 lefts = np.insert(cumulative_volume[:-1], 0, 0)
 
-fig, ax = plt.subplots(figsize=(10, 5))
+fig, ax = plt.subplots(figsize=(16, 8))
 for i in range(len(edited_df)):
     color = 'lightblue' if margins[i] >= 0 else 'lightcoral'
     ax.bar(lefts[i], prices[i], width=volumes[i], align='edge', color=color, edgecolor='black')
