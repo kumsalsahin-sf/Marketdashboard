@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 
 st.set_page_config(page_title="Risavika LNG Dashboard", layout="wide")
-st.title("📊 Risavika LNG – Customer Segment Economics Dashboard")
+st.title("📊 Risavika LNG – Customer Segment Dashboard")
 
 segments = [
     {"Segment": "Maritime Export - Hub Bunkering",   "Price (€/MWh)": 35, "Cost (€/MWh)": 46, "Volume (ktpa)": 25},
@@ -21,7 +21,7 @@ segments = [
 df = pd.DataFrame(segments)
 
 st.subheader("🧾 Input Table: Prices, Costs, and Volumes")
-edited_df = st.data_editor(df, use_container_width=True, num_rows="fixed")
+edited_df = st.data_editor(df, use_container_width=True, num_rows="dynamic")
 edited_df["Margin (€/MWh)"] = edited_df["Price (€/MWh)"] - edited_df["Cost (€/MWh)"]
 
 volumes = edited_df["Volume (ktpa)"].to_numpy()
