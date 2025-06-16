@@ -40,7 +40,7 @@ for i in range(len(edited_df)):
     ax.hlines(costs[i], lefts[i], lefts[i] + volumes[i], colors='black', linestyles='dashed')
     ax.text(lefts[i] + volumes[i]/2, prices[i] + 1,
             f"{names[i]}\nPrice: {prices[i]}€/MWh\nCost: {costs[i]}€/MWh",
-            rotation=90, ha='center', va='bottom', fontsize=8)
+            rotation=90, ha='center', va='bottom', fontsize=12)
 
 ax.set_xlim(0, cumulative_volume[-1])
 ax.set_xlabel("LNG Volume (ktpa)")
