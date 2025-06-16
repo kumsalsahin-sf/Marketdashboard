@@ -55,5 +55,4 @@ legend_handles = [
 ]
 ax.legend(handles=legend_handles, loc='upper left')
 st.pyplot(fig)
-
 st.caption("Edit the table above to explore different customer pricing and cost-to-serve assumptions.")
