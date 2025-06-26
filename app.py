@@ -10,14 +10,14 @@ st.title("📊 Risavika LNG – Customer Segment Dashboard")
 segments = [
     {"Segment": "Maritime Export - Spot Delivery",   "Price (€/MWh)": 40, "Cost (€/MWh)": 43, "Volume (ktpa)": 20},
     {"Segment": "Industry - Off-grid",               "Price (€/MWh)": 45, "Cost (€/MWh)": 45, "Volume (ktpa)": 15},
-    {"Segment": "Maritime Local - Ferries",          "Price (€/MWh)": 50, "Cost (€/MWh)": 42, "Volume (ktpa)": 40},
-    {"Segment": "Industry - CHP",                    "Price (€/MWh)": 50, "Cost (€/MWh)": 44, "Volume (ktpa)": 17},  
-    {"Segment": "Maritime Export - Hub Bunkering",   "Price (€/MWh)": 55, "Cost (€/MWh)": 44, "Volume (ktpa)": 25},
-    {"Segment": "Onshore Tankers - Local",           "Price (€/MWh)": 58, "Cost (€/MWh)": 48, "Volume (ktpa)": 23},
-    {"Segment": "Maritime Local - OSVs",             "Price (€/MWh)": 60, "Cost (€/MWh)": 43, "Volume (ktpa)": 35},
-    {"Segment": "Onshore Tankers - Highway",         "Price (€/MWh)": 60, "Cost (€/MWh)": 49, "Volume (ktpa)": 22},
-    {"Segment": "Road Export - Germany Fleets",      "Price (€/MWh)": 68, "Cost (€/MWh)": 51, "Volume (ktpa)": 20},
-    {"Segment": "Road Export - Sweden Fleets",       "Price (€/MWh)": 70, "Cost (€/MWh)": 47, "Volume (ktpa)": 25},
+    {"Segment": "Industry - CHP",                    "Price (€/MWh)": 45, "Cost (€/MWh)": 44, "Volume (ktpa)": 17},  
+     {"Segment": "Maritime Local - Ferries",          "Price (€/MWh)": 46, "Cost (€/MWh)": 44, "Volume (ktpa)": 40},
+    {"Segment": "Maritime Export - Hub Bunkering",   "Price (€/MWh)": 46, "Cost (€/MWh)": 45, "Volume (ktpa)": 25},
+    {"Segment": "Onshore Tankers - Local",           "Price (€/MWh)": 50, "Cost (€/MWh)": 45, "Volume (ktpa)": 23},
+    {"Segment": "Maritime Local - OSVs",             "Price (€/MWh)": 55, "Cost (€/MWh)": 46, "Volume (ktpa)": 35},
+    {"Segment": "Onshore Tankers - Highway",         "Price (€/MWh)": 56, "Cost (€/MWh)": 47, "Volume (ktpa)": 22},
+    {"Segment": "Road Export - Germany Fleets",      "Price (€/MWh)": 61, "Cost (€/MWh)": 51, "Volume (ktpa)": 20},
+    {"Segment": "Road Export - Sweden Fleets",       "Price (€/MWh)": 63, "Cost (€/MWh)": 50, "Volume (ktpa)": 25},
 ]
 
 df = pd.DataFrame(segments)
