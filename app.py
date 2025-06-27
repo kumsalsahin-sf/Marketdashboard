@@ -42,7 +42,7 @@ elif margin_option == "Negative Margin":
 filtered_df = filtered_df[filtered_df["Segment"].str.contains('|'.join(segment_types))]
 # Sort by increasing price
 # Sort by increasing cost
-filtered_df = filtered_df.sort_values(by="Cost (€/MWh)", ascending=True).reset_index(drop=True)
+filtered_df = filtered_df.sort_values(by="Price (€/MWh)", ascending=True).reset_index(drop=True)
 
 
 # Chart prep
