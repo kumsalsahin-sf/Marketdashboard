@@ -40,6 +40,8 @@ if margin_option == "Positive Margin":
 elif margin_option == "Negative Margin":
     filtered_df = filtered_df[filtered_df["Margin (€/MWh)"] < 0]
 filtered_df = filtered_df[filtered_df["Segment"].str.contains('|'.join(segment_types))]
+# Sort by increasing price
+filtered_df = filtered_df.sort_values(by="Price (€/MWh)", ascending=True).reset_index(drop=True)
 
 # Chart prep
 volumes = filtered_df["Volume (ktpa)"].to_numpy()
