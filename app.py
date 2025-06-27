@@ -21,6 +21,7 @@ segments = [
 ]
 
 df = pd.DataFrame(segments)
+df = df.sort_values(by="Cost (€/MWh)", ascending=True).reset_index(drop=True)
 
 st.subheader("📋 Input Table: Prices, Costs, and Volumes")
 edited_df = st.data_editor(df, use_container_width=True, num_rows="dynamic")
