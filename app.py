@@ -56,12 +56,10 @@ lefts = np.insert(cumulative_volume[:-1], 0, 0)
 fig, ax = plt.subplots(figsize=(16, 8))
 for i in range(len(filtered_df)):
     color = 'lightblue' if margins[i] >= 0 else 'lightcoral'
-   # Draw cost as the base
-ax.bar(lefts[i], prices[i], width=volumes[i], align='edge', color=color, edgecolor='black')
-ax.hlines(costs[i], lefts[i], lefts[i] + volumes[i], colors='black', linestyles='dashed')
+    ax.bar(lefts[i], prices[i], width=volumes[i], align='edge', color=color, edgecolor='black')
+    ax.hlines(costs[i], lefts[i], lefts[i] + volumes[i], colors='black', linestyles='dashed')
     ax.text(lefts[i] + volumes[i]/2, prices[i]/2, names[i], ha='center', va='center', fontsize=8, color='black', rotation=45)
     ax.text(lefts[i] + volumes[i]/2, prices[i] + 1.5, f"Competing Cost: {prices[i]}€/MWh\nCost at RLP: {costs[i]}€/MWh", ha='center', va='bottom', fontsize=6, color='black')
-
 ax.set_xlim(0, cumulative_volume[-1] if len(cumulative_volume) > 0 else 1)
 ax.set_xlabel("LNG Volume (ktpa)")
 ax.set_ylabel("Unit cost of direct substitute and cost to serve at RLP (\u20ac/MWh)")
